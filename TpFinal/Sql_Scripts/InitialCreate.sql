@@ -27,13 +27,4 @@ ADD FILE (
 TO FILEGROUP FG_Images2164425
 GO
 
--- Configuration des clés symétriques
-USE Hero
-GO
 
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'CeciEst1GrosMotDePasse!'
-GO
-CREATE CERTIFICATE Hero_Certificat WITH SUBJECT = 'ChiffrementDonneeCarteBancaire'
-GO
-CREATE SYMMETRIC KEY Hero_Cle WITH ALGORITHM = AES_256 ENCRYPTION BY CERTIFICATE Hero_Certificat
-GO
