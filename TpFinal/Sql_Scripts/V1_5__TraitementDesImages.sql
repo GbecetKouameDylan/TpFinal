@@ -6,14 +6,14 @@ constraint PK_Image_ImageID primary key (ImageID)
 );
 GO
 
-Alter TAble Heros.Image add constraint UC_Image_identifiant 
-Unique(Identifiant);
-Go
+--Alter TAble Heros.Image add constraint UC_Image_identifiant 
+--Unique(Identifiant);
+--Go
 
-Alter table Heros.Image add constraint DF_Image_identifiant
-Default newid() For Identifiant;
-Go
+--Alter table Heros.Image add constraint DF_Image_identifiant
+--Default newid() For Identifiant;dotn
+--Go
 
-Alter Table Heros.Image add 
-FichierImage varbinary(max) Filestream Null;
-Go
+--Alter Table Heros.Image add 
+--FichierImage varbinary(max) Filestream Null;
+--Go

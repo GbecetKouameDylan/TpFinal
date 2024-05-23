@@ -1,6 +1,4 @@
-Create Schema Heros
-Go
-Create Schema Divers
+
 Go
 Create Table Heros.Hero
 (
@@ -41,6 +39,7 @@ Create Table Heros.Identite
 IdentiteId int Identity(1,1) Not Null,
 DateNaissance Date Not Null,
 Age int Not Null,
+DateNaissanceChiffree VARBINARY(MAX)
  Constraint Pk_Hero_IdentiteID Primary Key (IdentiteId)
 )
 Go
@@ -71,3 +70,5 @@ Go
 Alter Table Heros.ComicsHero Add Constraint Fk_Hero_HeroComicsID Foreign Key (HeroId) References Heros.Hero(HeroId)on Delete Cascade
 Go
 Alter Table Heros.ComicsHero Add Constraint Fk_Hero_ComiscHeroID Foreign Key (ComicsId) References Divers.Comics(ComicsId)on Delete Cascade
+Go
+

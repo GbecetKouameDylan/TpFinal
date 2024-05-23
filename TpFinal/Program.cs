@@ -1,21 +1,41 @@
-var builder = WebApplication.CreateBuilder(args);
+using Microsoft.EntityFrameworkCore;
+using TpFinal.Data;
 
-// Add services to the container.
-builder.Services.AddRazorPages();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+namespace TpFinal
 {
-    app.UseExceptionHandler("/Error");
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
+
+            // Add services to the container.
+            builder.Services.AddRazorPages();
+            builder.Services.AddControllersWithViews();  // Ajout des services MVC
+
+            // Add DbContext
+            builder.Services.AddDbContext<HeroContext>(
+                options => {
+                    options.UseSqlServer(builder.Configuration.GetConnectionString("BDHero"));
+                    options.UseLazyLoadingProxies();
+                });
+
+            var app = builder.Build();
+
+            // Middleware configuration
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints => {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Heroes}/{action=Index}/{id?}"
+                );
+                endpoints.MapRazorPages();  // Map Razor Pages
+            });
+
+            app.Run();
+        }
+    }
 }
-app.UseStaticFiles();
-
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapRazorPages();
-
-app.Run();
