@@ -15,12 +15,8 @@
 --DECRYPTION BY CERTIFICATE IdentiteCertificate;
 
 ---- Insertion des données chiffrées dans la table Heros.Identite
---INSERT INTO Heros.Identite (DateNaissance, Age, DateNaissanceChiffree)
---VALUES (
---    '1985-07-28',
---    38,
---    ENCRYPTBYKEY(KEY_GUID('IdentiteSymmetricKey'), CAST('1985-07-28' AS NVARCHAR(10)))
---);
+--UPDATE Heros.Identite
+--SET DateNaissanceChiffree = ENCRYPTBYKEY(KEY_GUID('IdentiteSymmetricKey'), CAST(DateNaissance AS NVARCHAR(10)));
 
 ---- Fermeture de la clé symétrique après insertion des données
 --CLOSE SYMMETRIC KEY IdentiteSymmetricKey;

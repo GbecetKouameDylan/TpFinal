@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "H53aSzol4876SlhVAOb8GI7d3E3NjB+KHDEN89ixJc8=",
+  "Hash": "Bff61s9j4LkyeAxa5DUa7LXPekhq5EAryLjjKXOaVNw=",
   "Source": "TpFinal",
   "BasePath": "_content/TpFinal",
   "Mode": "Default",
@@ -16,40 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "C:\\Users\\Dylan\\Desktop\\TpFinal\\TpFinal\\obj\\Debug\\net6.0\\scopedcss\\bundle\\TpFinal.styles.css",
-      "SourceId": "TpFinal",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Dylan\\Desktop\\TpFinal\\TpFinal\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/TpFinal",
-      "RelativePath": "TpFinal.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Dylan\\Desktop\\TpFinal\\TpFinal\\obj\\Debug\\net6.0\\scopedcss\\bundle\\TpFinal.styles.css"
-    },
-    {
-      "Identity": "C:\\Users\\Dylan\\Desktop\\TpFinal\\TpFinal\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\TpFinal.bundle.scp.css",
-      "SourceId": "TpFinal",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Dylan\\Desktop\\TpFinal\\TpFinal\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/TpFinal",
-      "RelativePath": "TpFinal.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Dylan\\Desktop\\TpFinal\\TpFinal\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\TpFinal.bundle.scp.css"
-    },
     {
       "Identity": "C:\\Users\\Dylan\\Desktop\\TpFinal\\TpFinal\\wwwroot\\css\\site.css",
       "SourceId": "TpFinal",

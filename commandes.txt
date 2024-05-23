@@ -2,16 +2,16 @@ Modele:
 dotnet ef dbcontext scaffold Name=BDHero Microsoft.EntityFrameworkCore.SqlServer -o Models --context-dir Data --data-annotations --force
 
 Evole:
-evolve migrate sqlserver -c "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Hero;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False" -s Heros -s Divers --target-version 1.0
+evolve migrate sqlserver -c "Data Source=.\\SQLEXPRESS;Initial Catalog=Hero;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False" -s Heros -s Divers --target-version 1.0
 
-evolve migrate sqlserver -c "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Hero;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False" -s Heros -s Divers --target-version 1.1
+evolve migrate sqlserver -c "Data Source=.\\SQLEXPRESS;Initial Catalog=Hero;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False" -s Heros -s Divers --target-version 1.1
 
-evolve migrate sqlserver -c "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Hero;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False" -s Heros -s Divers --target-version 1.2
+evolve migrate sqlserver -c "Data Source=.\\SQLEXPRESS;Initial Catalog=Hero;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False" -s Heros -s Divers --target-version 1.2
 
-evolve migrate sqlserver -c "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Hero;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False" -s Heros -s Divers --target-version 1.3
+evolve migrate sqlserver -c "Data Source=.\\SQLEXPRESS;Initial Catalog=Hero;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False" -s Heros -s Divers --target-version 1.3
 
-evolve migrate sqlserver -c "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Hero;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False" -s Heros -s Divers --target-version 1.4
+evolve migrate sqlserver -c "Data Source=.\\SQLEXPRESS;Initial Catalog=Hero;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False" -s Heros -s Divers --target-version 1.4
 
-evolve migrate sqlserver -c "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Hero;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False" -s Heros -s Divers --target-version 1.5
+evolve migrate sqlserver -c "Data Source=.\\SQLEXPRESS;Initial Catalog=Hero;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False" -s Heros -s Divers --target-version 1.5
 
-evolve migrate sqlserver -c "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Hero;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False" -s Heros -s Divers --target-version 1.6
+evolve migrate sqlserver -c "Data Source=.\\SQLEXPRESS;Initial Catalog=Hero;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False" -s Heros -s Divers --target-version 1.6

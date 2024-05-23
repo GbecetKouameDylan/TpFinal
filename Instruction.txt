@@ -1,0 +1,14 @@
+Traitement d'images :
+
+J'ai créé une table Heros.Image dans ma base de données avec les colonnes appropriées pour stocker des images. Le champ FichierImage est défini en tant que type varbinary(max) Filestream. Cependant, je n'ai pas encore implémenté le code nécessaire pour permettre aux utilisateurs de télécharger des images. 
+
+Procédures stockées :
+
+J'ai créé une procédure stockée nommée AjouterHeroAComic pour ajouter un super-héros à un comic. Le code de cette procédure est fonctionnel. 
+
+
+Chiffrement et déchiffrement :
+
+J'ai commencé à mettre en place le chiffrement des données sensibles telles que la date de naissance des super-héros. J'ai créé une clé principale, un certificat et une clé symétrique dans ma base de données, et j'ai écrit des scripts pour chiffrer et déchiffrer les dates de naissance. Cependant, je ne suis pas sûr que cette fonctionnalité fonctionne correctement. Affichage manquant :
+
+Enfin, j'ai remarqué que certaines parties de mon application ne fonctionnent que partiellement en ce qui concerne l'affichage des données. Par exemple, dans ma vue Index, je peux afficher les informations sur les super-héros, mais je n'ai pas encore implémenté l'affichage des images et des détails supplémentaires des super-héros. 

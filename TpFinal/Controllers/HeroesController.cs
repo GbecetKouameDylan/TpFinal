@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using TpFinal.Data;
 using TpFinal.Models;
@@ -22,11 +24,41 @@ namespace TpFinal.Controllers
         // GET: Heroes
         public async Task<IActionResult> Index()
         {
-
-            return View();
+            var heroContext = await _context.VHeroDetails.ToListAsync();
+            return View(heroContext);
         }
 
-        // GET: Heroes/Details/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AjouterHeroAComic(int heroId, int comicsId, DateTime dateAjout)
+        {
+            try
+            {
+                using (var connection = _context.Database.GetDbConnection() as SqlConnection)
+                {
+                    await connection.OpenAsync();
+
+                    using (var command = connection.CreateCommand())
+                    {
+                        command.CommandText = "AjouterHeroAComic";
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        command.Parameters.AddWithValue("@HeroId", heroId);
+                        command.Parameters.AddWithValue("@ComicsId", comicsId);
+                        command.Parameters.AddWithValue("@DateAjout", dateAjout);
+
+                        await command.ExecuteNonQueryAsync();
+                    }
+                }
+
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Une erreur s'est produite : {ex.Message}");
+            }
+        }
+
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Heroes == null)
@@ -46,7 +78,6 @@ namespace TpFinal.Controllers
             return View(hero);
         }
 
-        // GET: Heroes/Create
         public IActionResult Create()
         {
             ViewData["IdentiteId"] = new SelectList(_context.Identites, "IdentiteId", "IdentiteId");
@@ -54,9 +85,6 @@ namespace TpFinal.Controllers
             return View();
         }
 
-        // POST: Heroes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("HeroId,Nom,PouvoirId,IdentiteId")] Hero hero)
@@ -72,7 +100,6 @@ namespace TpFinal.Controllers
             return View(hero);
         }
 
-        // GET: Heroes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Heroes == null)
@@ -90,9 +117,6 @@ namespace TpFinal.Controllers
             return View(hero);
         }
 
-        // POST: Heroes/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("HeroId,Nom,PouvoirId,IdentiteId")] Hero hero)
@@ -127,7 +151,6 @@ namespace TpFinal.Controllers
             return View(hero);
         }
 
-        // GET: Heroes/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Heroes == null)
@@ -135,7 +158,8 @@ namespace TpFinal.Controllers
                 return NotFound();
             }
 
-            var hero = await _context.Heroes
+            var hero
+ = await _context.Heroes
                 .Include(h => h.Identite)
                 .Include(h => h.Pouvoir)
                 .FirstOrDefaultAsync(m => m.HeroId == id);
@@ -147,7 +171,6 @@ namespace TpFinal.Controllers
             return View(hero);
         }
 
-        // POST: Heroes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -161,14 +184,14 @@ namespace TpFinal.Controllers
             {
                 _context.Heroes.Remove(hero);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool HeroExists(int id)
         {
-          return (_context.Heroes?.Any(e => e.HeroId == id)).GetValueOrDefault();
+            return (_context.Heroes?.Any(e => e.HeroId == id)).GetValueOrDefault();
         }
     }
 }

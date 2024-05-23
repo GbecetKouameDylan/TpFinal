@@ -46,49 +46,26 @@ INSERT [Divers].[Comics] ([ComicsId], [Nom], [Date]) VALUES (40, N'Terra', CAST(
 SET IDENTITY_INSERT [Divers].[Comics] OFF
 
 GO
-SET IDENTITY_INSERT [Heros].[Identite] ON 
+SET IDENTITY_INSERT [Heros].[Identite] ON;
 
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (1, CAST(N'2023-10-21' AS Date), 28)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (2, CAST(N'2023-10-26' AS Date), 47)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (3, CAST(N'2023-10-02' AS Date), 19)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (4, CAST(N'2023-03-10' AS Date), 78)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (5, CAST(N'2023-06-07' AS Date), 78)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (6, CAST(N'2023-06-06' AS Date), 69)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (7, CAST(N'2023-08-14' AS Date), 72)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (8, CAST(N'2023-03-31' AS Date), 63)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (9, CAST(N'2023-12-15' AS Date), 61)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (10, CAST(N'2023-07-31' AS Date), 54)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (11, CAST(N'2024-02-01' AS Date), 78)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (12, CAST(N'2023-09-12' AS Date), 30)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (13, CAST(N'2024-01-12' AS Date), 61)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (14, CAST(N'2023-03-02' AS Date), 68)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (15, CAST(N'2023-07-02' AS Date), 55)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (16, CAST(N'2023-10-06' AS Date), 77)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (17, CAST(N'2023-07-20' AS Date), 33)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (18, CAST(N'2023-06-30' AS Date), 32)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (19, CAST(N'2023-05-25' AS Date), 39)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (20, CAST(N'2024-01-03' AS Date), 29)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (21, CAST(N'2023-03-13' AS Date), 62)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (22, CAST(N'2023-03-14' AS Date), 60)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (23, CAST(N'2023-07-01' AS Date), 56)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (24, CAST(N'2023-03-27' AS Date), 59)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (25, CAST(N'2024-01-19' AS Date), 79)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (26, CAST(N'2023-04-01' AS Date), 47)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (27, CAST(N'2023-09-10' AS Date), 52)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (28, CAST(N'2023-08-21' AS Date), 50)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (29, CAST(N'2024-01-17' AS Date), 53)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (30, CAST(N'2023-05-20' AS Date), 70)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (31, CAST(N'2023-08-12' AS Date), 36)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (32, CAST(N'2024-01-02' AS Date), 73)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (33, CAST(N'2023-10-30' AS Date), 27)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (34, CAST(N'2023-12-02' AS Date), 37)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (35, CAST(N'2023-12-03' AS Date), 71)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (36, CAST(N'2023-06-06' AS Date), 70)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (37, CAST(N'2023-11-05' AS Date), 28)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (38, CAST(N'2023-05-12' AS Date), 73)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (39, CAST(N'2023-06-08' AS Date), 26)
-INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES (40, CAST(N'2024-02-15' AS Date), 72)
-SET IDENTITY_INSERT [Heros].[Identite] OFF
+INSERT [Heros].[Identite] ([IdentiteId], [DateNaissance], [Age]) VALUES
+(1, '2023-10-21', 28), (2, '2023-10-26', 47), (3, '2023-10-02', 19),
+(4, '2023-03-10', 78), (5, '2023-06-07', 78), (6, '2023-06-06', 69),
+(7, '2023-08-14', 72), (8, '2023-03-31', 63), (9, '2023-12-15', 61),
+(10, '2023-07-31', 54), (11, '2024-02-01', 78), (12, '2023-09-12', 30),
+(13, '2024-01-12', 61), (14, '2023-03-02', 68), (15, '2023-07-02', 55),
+(16, '2023-10-06', 77), (17, '2023-07-20', 33), (18, '2023-06-30', 32),
+(19, '2023-05-25', 39), (20, '2024-01-03', 29), (21, '2023-03-13', 62),
+(22, '2023-03-14', 60), (23, '2023-07-01', 56), (24, '2023-03-27', 59),
+(25, '2024-01-19', 79), (26, '2023-04-01', 47), (27, '2023-09-10', 52),
+(28, '2023-08-21', 50), (29, '2024-01-17', 53), (30, '2023-05-20', 70),
+(31, '2023-08-12', 36), (32, '2024-01-02', 73), (33, '2023-10-30', 27),
+(34, '2023-12-02', 37), (35, '2023-12-03', 71), (36, '2023-06-06', 70),
+(37, '2023-11-05', 28), (38, '2023-05-12', 73), (39, '2023-06-08', 26),
+(40, '2024-02-15', 72);
+
+SET IDENTITY_INSERT [Heros].[Identite] OFF;
+
 GO
 SET IDENTITY_INSERT [Heros].[Pouvoir] ON 
 

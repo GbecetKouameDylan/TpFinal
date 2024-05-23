@@ -24,6 +24,7 @@ namespace TpFinal.Data
         public virtual DbSet<Duo> Duos { get; set; } = null!;
         public virtual DbSet<Hero> Heroes { get; set; } = null!;
         public virtual DbSet<Identite> Identites { get; set; } = null!;
+        public virtual DbSet<Image> Images { get; set; } = null!;
         public virtual DbSet<Pouvoir> Pouvoirs { get; set; } = null!;
         public virtual DbSet<VHeroDetail> VHeroDetails { get; set; } = null!;
 
@@ -95,6 +96,11 @@ namespace TpFinal.Data
                     .WithMany(p => p.Heroes)
                     .HasForeignKey(d => d.PouvoirId)
                     .HasConstraintName("Fk_Hero_Pouvoir");
+            });
+
+            modelBuilder.Entity<Image>(entity =>
+            {
+                entity.Property(e => e.Identifiant).HasDefaultValueSql("(newid())");
             });
 
             modelBuilder.Entity<VHeroDetail>(entity =>

@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Dylan\\Desktop\\TpFinal\\TpFinal\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\TpFinal.bundle.scp.css",
-      "PackagePath": "staticwebassets\\TpFinal.bundle.scp.css"
-    },
-    {
       "Id": "C:\\Users\\Dylan\\Desktop\\TpFinal\\TpFinal\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
